@@ -1,0 +1,36 @@
+@startuml Usecase
+left to right direction
+actor User
+rectangle "Shino Cactus"{
+    usecase Overview #pink
+    usecase Notifications #pink
+    usecase "Pot Changing" as PotC #pink
+    usecase Water #pink
+    usecase Fertilizing #pink 
+    usecase "Adding Pesticides" as APesticides #pink
+    usecase "Plan Mangement" as PlanM #pink
+    usecase Plant #pink
+    usecase Care #pink
+    usecase "Soil Management" as SoilM #pink
+    usecase "Pot Management" as PotM #pink
+    usecase "Fertilizer Management" as FertilizerM #pink
+    usecase "Pesticide Management" as PesticideM #pink
+}
+
+User --> Overview
+User --> Notifications
+User --> PotC
+User --> Water
+User --> Fertilizing
+User --> APesticides
+User --> PlanM
+User --> SoilM
+User --> PotM
+User --> FertilizerM
+User --> PesticideM
+
+Overview .> Notifications : <<Inculde>>
+
+PlanM ..> Plant : <<Extend>>
+PlanM ..> Care : <<Extend>>
+@enduml
