@@ -1,8 +1,10 @@
 @startuml Usecase
 left to right direction
 actor User
-rectangle "Shino Cactus"{
-    usecase Overview #pink
+rectangle "Shino Cactus" as ShinoCactus{
+    note "Usecase Description Status\nPink: Not available\nYellow: Uncompleted" as CommonNote
+
+    usecase Overview #Yellow
     usecase Notifications #pink
     usecase "Pot Changing" as PotC #pink
     usecase Water #pink
@@ -17,6 +19,7 @@ rectangle "Shino Cactus"{
     usecase "Pesticide Management" as PesticideM #pink
 }
 
+
 User --> Overview
 User --> Notifications
 User --> PotC
@@ -29,8 +32,8 @@ User --> PotM
 User --> FertilizerM
 User --> PesticideM
 
-Overview .> Notifications : <<Inculde>>
-
 PlanM ..> Plant : <<Extend>>
 PlanM ..> Care : <<Extend>>
+
+
 @enduml
