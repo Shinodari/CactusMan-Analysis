@@ -5,7 +5,7 @@ rectangle "Shino Cactus" as ShinoCactus{
     note "Usecase Description Status\nPink: Not available\nYellow: Uncompleted" as CommonNote
 
     usecase Overview #Yellow
-    usecase Notifications #pink
+    usecase Notifications #Yellow
     usecase "Pot Changing" as PotC #pink
     usecase Water #pink
     usecase Fertilizing #pink 
