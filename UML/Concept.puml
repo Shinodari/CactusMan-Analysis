@@ -10,7 +10,7 @@ rectangle "Shino Cactus" as ShinoCactus{
     usecase Water #pink
     usecase Fertilizing #pink 
     usecase "Adding Pesticides" as APesticides #pink
-    usecase "Plan Mangement" as PlanM #pink
+    usecase "Plan Management" as PlanM #pink
     usecase Plant #pink
     usecase Care #pink
     usecase "Soil Management" as SoilM #pink
