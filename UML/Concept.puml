@@ -13,12 +13,12 @@ rectangle "Shino Cactus" as ShinoCactus{
     usecase "Plan Management" as PlanM #pink
     usecase Plant #pink
     usecase Care #pink
-    usecase "Soil Management" as SoilM #pink
+    usecase "Growing Mix Management" as GXM
+    usecase "Growing Media Management" as GMM #pink
     usecase "Pot Management" as PotM #pink
     usecase "Fertilizer Management" as FertilizerM #pink
     usecase "Pesticide Management" as PesticideM #pink
 }
-
 
 User --> Overview
 User --> Notifications
@@ -27,13 +27,12 @@ User --> Water
 User --> Fertilizing
 User --> APesticides
 User --> PlanM
-User --> SoilM
+User --> GXM
+User --> GMM
 User --> PotM
 User --> FertilizerM
 User --> PesticideM
 
 PlanM ..> Plant : <<Extend>>
 PlanM ..> Care : <<Extend>>
-
-
 @enduml
