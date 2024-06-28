@@ -3,6 +3,7 @@ left to right direction
 actor User
 rectangle "Shino Cactus" as ShinoCactus{
     note "Usecase Description Status\nPink: Not available\nYellow: Uncompleted" as CommonNote
+    note "Each usecase description\nsame Growing Media Management\nrefer Usecase 2.2" as SameDesc
 
     usecase Overview #Yellow
     usecase Notifications #Yellow
@@ -15,9 +16,10 @@ rectangle "Shino Cactus" as ShinoCactus{
     usecase Care #pink
     usecase "Growing Mix Management" as GXM
     usecase "Growing Media Management" as GMM
-    usecase "Pot Management" as PotM #pink
-    usecase "Fertilizer Management" as FertilizerM #pink
-    usecase "Pesticide Management" as PesticideM #pink
+    usecase "Pot Management" as PotM #darkgrey
+    usecase "Fertilizer Management" as FertilizerM #darkgrey
+    usecase "Pesticide Management" as PesticideM #darkgrey
+
 }
 
 User --> Overview
@@ -35,4 +37,9 @@ User --> PesticideM
 
 PlanM ..> Plant : <<Extend>>
 PlanM ..> Care : <<Extend>>
+
+GMM .. SameDesc
+PotM .. SameDesc
+FertilizerM .. SameDesc
+PesticideM .. SameDesc
 @enduml
