@@ -11,8 +11,8 @@ rectangle "Shino Cactus" as ShinoCactus{
     usecase Water #pink
     usecase Fertilizing #pink 
     usecase "Adding Pesticides" as APesticides #pink
-    usecase "Plan Management" as PlanM #pink
-    usecase Plant #pink
+    usecase "Planning" as PlanM #pink
+    usecase Planting #pink
     usecase Care #pink
     usecase "Growing Mix Management" as GXM
     usecase "Growing Media Management" as GMM
@@ -29,14 +29,16 @@ User --> Water
 User --> Fertilizing
 User --> APesticides
 User --> PlanM
+User --> Planting
+User --> Care
 User --> GXM
 User --> GMM
 User --> PotM
 User --> FertilizerM
 User --> PesticideM
 
-PlanM ..> Plant : <<Extend>>
-PlanM ..> Care : <<Extend>>
+PlanM .right.> Planting : <<Extend>>
+PlanM .left.> Care : <<Extend>>
 
 GMM .. SameDesc
 PotM .. SameDesc
